@@ -5,7 +5,7 @@
   const Date = document.getElementById('rdate')
   const Genre = document.getElementById('genre')
   const Plot = document.getElementById('plot')
-   const path = window.location.search.slice(1)
+   const path = window.location.search.slice(1) // geeting the Id from the Url
     var requestOptions = {
         method: 'GET',
         redirect: 'follow'
