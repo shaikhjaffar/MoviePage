@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"/>
+    <title>Document</title>
+</head>
+<style>
+    h2{
+ height: 60px;
+text-align: center;
+justify-items: left;
+margin-top: 20px;
+color: cornsilk
+    }
+    .left{
+        margin-left: 20%;
+    }
+    @media screen and (max-width:500px) {
+        .left{
+            margin-left: 0;
+        }
+    }
+</style>
+<body>
+       
+       <h2>My Favorite Movie List</h2>
+       <button class="fav-button"><a href="./index.html">Search More Movie</a></button>
+       <div class="result left" id="box">
+    </div>
+</body>
+<script src="./favorite.js"></script>
+</html>

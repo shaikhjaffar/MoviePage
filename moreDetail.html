@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url(./bg.jpg);
+   background-attachment: fixed;
+   background-size: cover;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    img {
+        max-width: 60%;
+			height: auto;
+        margin-bottom: 20px;
+        display: block;
+    }
+    .fav-button {
+  width: 10%;
+  min-width: 150px;
+height: 60px;
+margin-left: 80%;
+position: sticky;
+top: 10px;
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.fav-button:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+.fav-button a{
+    text-decoration: none;
+}
+@media screen and (max-width:550px) {
+    .fav-button{
+        margin-left: 30%;
+        width: 150px;
+    }
+}
+</style>
+<body>
+     <button class="fav-button"><a href="./index.html">Search More Movie</a></button>
+    <div class="container">
+		<img id="poster" alt="Movie Poster">
+		<h1 id="title">Movie Title</h1>
+		<p><strong>Directed by:</strong> <span id="director"></span></p>
+		<p><strong>Actor:</strong><span id="actor"></span></p>
+		<p><strong>Release Date:</strong><span id="rdate"></span></p>
+		<p><strong>Genre:</strong><span id="genre"></span></p>
+		<p><strong>Plot:</strong><span id="plot"></span></p>
+	</div>
+</body>
+<script src="./nextPage.js"></script>
+</html>
+
