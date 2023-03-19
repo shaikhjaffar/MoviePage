@@ -11,7 +11,7 @@
         redirect: 'follow'
       };
       
-      fetch("http://www.omdbapi.com/?i=".concat(path,"&apikey=9598adea"), requestOptions)
+      fetch("https://www.omdbapi.com/?i=".concat(path,"&apikey=9598adea"), requestOptions)
         .then(response => response.json())
         .then((result) => {  console.log(result.Response)
          if (result.Response == "True" ){
