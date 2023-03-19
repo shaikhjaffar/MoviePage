@@ -33,7 +33,7 @@ function Search() {
         redirect: 'follow'
       };
       
-      fetch("http://www.omdbapi.com/?s=".concat(searchTerm,"&apikey=9598adea"), requestOptions)
+      fetch("https://www.omdbapi.com/?s=".concat(searchTerm,"&apikey=9598adea"), requestOptions)
         .then(response => response.json())
         .then((result) => {  console.log(result.Response)
          if (result.Response == "True" ){
