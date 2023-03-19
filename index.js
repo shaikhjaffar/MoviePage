@@ -2,18 +2,10 @@ const search = document.getElementById('search')
 const button = document.getElementById('btn')
 const box = document.getElementById('box')
 let Card = document.querySelectorAll('.card')
-let favorite = []
-let myResult = {}
-let MovieList = []
-function Send(value) {
-  const myObject = { hello:value };
-const myObjectString = JSON.stringify(myObject);
-localStorage.setItem('objectGreeting', myObjectString);
-}
-
+let favorite = []  // empty array for adding the favorite
+let MovieList = []  // All movie search list
 
 function showData(value) {
-    console.log(value.Search)
      MovieList = value.Search
   let txt = ""
   let link = "this.href='./moreDetail.html?"
@@ -50,13 +42,13 @@ function Search() {
         
 }
 
-search.addEventListener("keydown", function (e) {
+search.addEventListener("keydown", function (e) {  // searching the movie name by clicking enter key
   if (e.key === "Enter") {  
      Search()
   }
 });
 
-function AddFavorite(id) {
+function AddFavorite(id) {  // adding favorite 
   favorite.push(id)
   console.log(favorite)
    const mybutton = document.getElementById(id)
