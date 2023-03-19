@@ -1,13 +1,13 @@
-let storedId = JSON.parse(localStorage.getItem("id"));
+let storedId = JSON.parse(localStorage.getItem("id")); // storing Added Id and using here
 console.log(storedId)
 const box = document.getElementById('box')
 let txt = ""
 let i=0
-storedId.forEach(element => {
+storedId.forEach(element => {  // iterating one by one all id for fetching the Title of the movie
       getData(element)
 });
 
-function getData(id) {
+function getData(id) {   // fetching APi by passing ID
   
     var requestOptions = {
         method: 'GET',
@@ -29,7 +29,7 @@ function getData(id) {
    
 }
 
-function showData(value) { 
+function showData(value) {   // show the Title in the UI
     i++
   let link = "this.href='./moreDetail.html?"
   let click = "RemoveFavorite('"
@@ -37,7 +37,7 @@ function showData(value) {
     box.innerHTML = txt
 }
 
-function RemoveFavorite(id) {
+function RemoveFavorite(id) {     // Removing the movie from the List
    storedId.pop(id)
    localStorage.setItem("id", JSON.stringify(storedId));
    console.log(storedId)
